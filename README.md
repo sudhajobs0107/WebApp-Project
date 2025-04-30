@@ -1,12 +1,12 @@
 # WebApp - Project
 ## Steps :-
 ## **1. Create a instance :-**
-![1](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/task1.1.png)
+![1](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/1.png)
 ## **2. Connect instance to local(powershell) through ssh :-**
 ```
 ssh -i "key" ubuntu@hostname
 ```
-![2](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/task1.2.png)
+![2](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/2.png)
 ## **3. Run command :-**
 ```
 sudo apt update
@@ -21,7 +21,7 @@ sudo usermod -aG docker Ubuntu
 docker –version
 sudo reboot
 ```
-![3](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/task1.3.png)
+![3](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/3.png)
 ## **5. Install Jenkins :-**
 ```
 sudo apt update && sudo apt upgrade -y
@@ -37,15 +37,15 @@ systemctl restart Jenkins
 sudo apt-get update
 sudo systemctl status Jenkins
 ```
-![4](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/task1.4.png)
+![4](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/4.png)
 ## **6. Now copy **Public IPv4 address:8080** and we will be on **Unlock Jenkins page**. Make sure port 8080 is open if not please open port 8080.**
-![5](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/task1.5.png)
+![5](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/5.png)
 ## **7. To unlock jenkins, use command :-**
 ```
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 ## **8. And we will get our password. Copy and paste it to unlock Jenkins → Now click Install suggested plugins → Fill details → Welcome to Jenkins**
-![6](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/task1.6.png)
+![6](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/6.png)
 ## **9. Now to install trivy use command :-**
 ```
 sudo apt-get install wget apt-transport-https gnupg lsb-release
@@ -55,7 +55,7 @@ sudo apt-get update
 sudo apt-get install trivy
 trivy –version
 ```
-![7](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/task1.7.png)
+![7](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/7.png)
 ## **10. Go to into repository → Settings → Webhooks → Add Webhook → Payload URL:- http://Public-IP:8080/github-webhook/ → Content type: application/json → Click Add Webhook**
 ## **11. Setup Email Integration With Jenkins. First we have to install email plugin. For this Go to Manage Jenkins → Plugins → Available Plugins → Search Email Extension Template → install this plugin. Now go to your Gmail → click on your profile → click on Manage Your Google Account → click on the Security tab on the left side panel → search App Passwords → Create a password.**
 ## **12. Now add Email Credentials in Jenkins → Go to Manage Jenkins → click on Credentials → System → Global credentials → Add Credentials → Username with password → in Secret put sudhajobs0107@gmail.com and password that we created earlier → ID "email" → Description "email" → Create.**
@@ -111,9 +111,9 @@ pipeline {
 }
 ```
 ## **17. Now click Apply and Save → **Build Now** and our pipeline will build successfully.**
-![8](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/task1.8.png)
+![8](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/8.png)
 ## **18. When pipeline "SUCCES" or "FAILURE" we will get email like image given below :-**
-![9](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/task1.9.png)
+![9](https://github.com/sudhajobs0107/WebApp-Project/blob/main/images/9.png)
 
 
 # Our WebApp Project is completed :smile:.
